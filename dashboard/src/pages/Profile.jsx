@@ -308,7 +308,7 @@ export default function Profile() {
 
                                 <img
 
-                                    src={`http://127.0.0.1:8000/uploads/${profile.profile_image}`}
+                                   src={`${import.meta.env.VITE_API_URL}/uploads/${profile.profile_image}`}
 
                                     alt="Profile"
 
