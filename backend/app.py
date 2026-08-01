@@ -54,12 +54,14 @@ Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://air-quality-prediction-system-mauve.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Load Model
 BASE_DIR = os.path.dirname(__file__)
 
