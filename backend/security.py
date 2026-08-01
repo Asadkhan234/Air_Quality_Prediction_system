@@ -9,14 +9,14 @@ from sqlalchemy.orm import Session
 
 from database import get_db
 from models import User
-
+import os
 
 pwd_context = CryptContext(
     schemes=["bcrypt"],
     deprecated="auto"
 )
 
-SECRET_KEY = "your_super_secret_key_change_this"
+SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
