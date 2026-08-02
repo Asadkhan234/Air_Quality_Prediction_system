@@ -21,3 +21,5 @@ aiofiles==24.1.0
 bcrypt==4.0.1
 
 requests==2.32.5
+
+psycopg2-binary==2.9.9
