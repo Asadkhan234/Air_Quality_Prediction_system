@@ -12,7 +12,10 @@ import {
     Mail,
     Rocket,
     LineChart,
-    KeyRound
+    KeyRound,
+    Globe,
+    Server,
+    History
 } from "lucide-react";
 
 
@@ -94,7 +97,7 @@ export default function About() {
 
                                 <span className="font-semibold">
 
-                                    Machine Learning Project
+                                    Machine Learning Project • Live in Production
 
                                 </span>
 
@@ -110,10 +113,11 @@ export default function About() {
 
                             <p className="mt-8 text-lg text-gray-100 leading-8">
 
-                                A professional Machine Learning dashboard
-                                developed using React, FastAPI, Python,
-                                Scikit-Learn and Tailwind CSS for predicting
-                                air quality categories across Pakistan.
+                                A professional, full-stack Machine Learning
+                                dashboard built with React, FastAPI, PostgreSQL,
+                                Scikit-Learn and Tailwind CSS — deployed and
+                                publicly accessible, predicting air quality
+                                categories across Pakistan in real time.
 
                             </p>
 
@@ -132,6 +136,22 @@ export default function About() {
                                 >
                                     📊 Explore Analytics
                                 </Link>
+
+                            </div>
+
+                            {/* Live Deployment Link */}
+
+                            <div className="flex flex-wrap gap-4 mt-6">
+
+                                <a
+                                    href="https://air-quality-prediction-system-mauve.vercel.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-black/20 backdrop-blur-md border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-black/30 transition duration-300"
+                                >
+                                    <Globe size={16} />
+                                    Live Site — Vercel
+                                </a>
 
                             </div>
 
@@ -233,6 +253,19 @@ export default function About() {
 
                                     </div>
 
+                                    <div className="flex items-center gap-4">
+
+                                        <Server className="text-sky-300" />
+
+                                        <span>
+
+                                            Deployed on Render + Vercel
+                                            with PostgreSQL
+
+                                        </span>
+
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -323,9 +356,11 @@ export default function About() {
                             { name: "Tailwind CSS", icon: "🎨", color: "from-sky-500 to-cyan-500" },
                             { name: "Leaflet", icon: "🗺️", color: "from-green-600 to-lime-500" },
                             { name: "Recharts", icon: "📈", color: "from-teal-500 to-cyan-600" },
-                            { name: "SQLite", icon: "🗄️", color: "from-slate-500 to-slate-700" },
+                            { name: "PostgreSQL", icon: "🐘", color: "from-blue-600 to-indigo-700" },
                             { name: "SQLAlchemy", icon: "💾", color: "from-indigo-500 to-blue-500" },
-                            { name: "JWT", icon: "🔐", color: "from-red-500 to-pink-500" }
+                            { name: "JWT", icon: "🔐", color: "from-red-500 to-pink-500" },
+                            { name: "Render", icon: "☁️", color: "from-slate-600 to-slate-800" },
+                            { name: "Vercel", icon: "▲", color: "from-gray-800 to-black" }
                         ].map((tech, index) => (
 
                             <div
@@ -362,7 +397,9 @@ export default function About() {
                             "City-wise Comparison",
                             "Health Risk Recommendations",
                             "Secure JWT Authentication",
-                            "Email OTP Password Recovery"
+                            "Email OTP Password Recovery",
+                            "User Profile & Prediction History",
+                            "Deployed with Persistent PostgreSQL Storage"
                         ].map((feature, index) => (
 
                             <div
@@ -431,8 +468,8 @@ export default function About() {
                         <div className="text-5xl mb-5">⚡</div>
                         <h3 className="text-2xl font-bold mb-3">Fast Prediction API</h3>
                         <p className="text-gray-600 leading-7">
-                            FastAPI backend provides high-speed prediction
-                            and analytics endpoints.
+                            FastAPI backend deployed on Render provides
+                            high-speed prediction and analytics endpoints.
                         </p>
                     </div>
 
@@ -441,7 +478,7 @@ export default function About() {
                         <h3 className="text-2xl font-bold mb-3">Responsive Dashboard</h3>
                         <p className="text-gray-600 leading-7">
                             Fully responsive interface built using
-                            React and Tailwind CSS.
+                            React and Tailwind CSS, deployed on Vercel.
                         </p>
                     </div>
 
@@ -451,6 +488,24 @@ export default function About() {
                         <p className="text-gray-600 leading-7">
                             JWT authentication, email OTP verification,
                             password recovery and protected routes.
+                        </p>
+                    </div>
+
+                    <div className="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-2 transition duration-300">
+                        <div className="text-5xl mb-5">👤</div>
+                        <h3 className="text-2xl font-bold mb-3">Profile & History</h3>
+                        <p className="text-gray-600 leading-7">
+                            Manage your profile picture and details,
+                            and review your past AQI predictions.
+                        </p>
+                    </div>
+
+                    <div className="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-2 transition duration-300">
+                        <div className="text-5xl mb-5">🐘</div>
+                        <h3 className="text-2xl font-bold mb-3">Persistent PostgreSQL</h3>
+                        <p className="text-gray-600 leading-7">
+                            User accounts and prediction history are stored
+                            in a managed PostgreSQL database on Render.
                         </p>
                     </div>
 
@@ -578,11 +633,12 @@ export default function About() {
 
                 <div className="bg-white rounded-3xl shadow-xl p-10">
 
-                    <div className="grid md:grid-cols-5 gap-6 text-center items-center">
+                    <div className="grid md:grid-cols-9 gap-4 text-center items-center">
 
                         <div className="bg-blue-50 rounded-2xl p-6 shadow">
                             <div className="text-5xl mb-4">💻</div>
                             <h3 className="font-bold">React Dashboard</h3>
+                            <p className="text-gray-500 text-xs mt-2">Vercel</p>
                         </div>
 
                         <div className="text-4xl text-blue-600">➜</div>
@@ -590,6 +646,7 @@ export default function About() {
                         <div className="bg-green-50 rounded-2xl p-6 shadow">
                             <div className="text-5xl mb-4">🚀</div>
                             <h3 className="font-bold">FastAPI Backend</h3>
+                            <p className="text-gray-500 text-xs mt-2">Render</p>
                         </div>
 
                         <div className="text-4xl text-blue-600">➜</div>
@@ -597,6 +654,15 @@ export default function About() {
                         <div className="bg-purple-50 rounded-2xl p-6 shadow">
                             <div className="text-5xl mb-4">🤖</div>
                             <h3 className="font-bold">ML Model</h3>
+                            <p className="text-gray-500 text-xs mt-2">Scikit-learn</p>
+                        </div>
+
+                        <div className="text-4xl text-blue-600">➜</div>
+
+                        <div className="bg-indigo-50 rounded-2xl p-6 shadow">
+                            <div className="text-5xl mb-4">🐘</div>
+                            <h3 className="font-bold">PostgreSQL</h3>
+                            <p className="text-gray-500 text-xs mt-2">Render Database</p>
                         </div>
 
                     </div>
@@ -671,6 +737,28 @@ export default function About() {
                             </div>
                         </div>
 
+                        <div className="flex items-start gap-4">
+                            <div className="text-4xl">☁️</div>
+                            <div>
+                                <h3 className="text-xl font-bold">Production Deployment</h3>
+                                <p className="text-gray-600 mt-2">
+                                    Ship a fully working, publicly accessible
+                                    application with persistent cloud storage.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
+                            <div className="text-4xl">📜</div>
+                            <div>
+                                <h3 className="text-xl font-bold">Prediction History</h3>
+                                <p className="text-gray-600 mt-2">
+                                    Let users track and revisit their previous
+                                    AQI predictions over time.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -733,11 +821,11 @@ export default function About() {
                     </div>
 
                     <div className="bg-white rounded-3xl shadow-xl p-8 hover:-translate-y-2 transition duration-300">
-                        <div className="text-5xl mb-5">☁️</div>
-                        <h3 className="text-2xl font-bold mb-4">Cloud Deployment</h3>
+                        <div className="text-5xl mb-5">⚡</div>
+                        <h3 className="text-2xl font-bold mb-4">Caching & Rate Limiting</h3>
                         <p className="text-gray-600">
-                            Scale the platform on cloud infrastructure
-                            for wider public access.
+                            Add response caching and rate limiting to
+                            further scale the deployed API.
                         </p>
                     </div>
 
@@ -765,6 +853,7 @@ export default function About() {
                             <span className="bg-white/20 px-5 py-3 rounded-full">Machine Learning</span>
                             <span className="bg-white/20 px-5 py-3 rounded-full">React</span>
                             <span className="bg-white/20 px-5 py-3 rounded-full">FastAPI</span>
+                            <span className="bg-white/20 px-5 py-3 rounded-full">PostgreSQL</span>
                             <span className="bg-white/20 px-5 py-3 rounded-full">Data Science</span>
                         </div>
 
@@ -822,6 +911,14 @@ export default function About() {
                             </div>
                         </div>
 
+                        <div className="flex items-center gap-6">
+                            <div className="w-14 h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">5</div>
+                            <div>
+                                <h3 className="text-2xl font-bold">Production Deployment</h3>
+                                <p className="text-gray-600">Deployed backend on Render with PostgreSQL and frontend on Vercel.</p>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -836,7 +933,7 @@ export default function About() {
 
                     <h2 className="text-4xl font-bold text-center mb-10">🚀 Project Status</h2>
 
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                    <div className="grid grid-cols-2 md:grid-cols-6 gap-8 text-center">
 
                         <div>
                             <h3 className="text-5xl font-bold">✔</h3>
@@ -860,7 +957,12 @@ export default function About() {
 
                         <div>
                             <h3 className="text-5xl font-bold">✔</h3>
-                            <p className="mt-3">Deployment Ready</p>
+                            <p className="mt-3">Database</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-5xl font-bold">✔</h3>
+                            <p className="mt-3">Live &amp; Deployed</p>
                         </div>
 
                     </div>
@@ -914,6 +1016,20 @@ export default function About() {
 
                     </div>
 
+                    <div className="mt-6 flex flex-wrap justify-center gap-6">
+
+                        <a
+                            href="https://air-quality-prediction-system-mauve.vercel.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-cyan-50 text-cyan-700 px-6 py-4 rounded-xl shadow hover:bg-cyan-100 transition font-semibold"
+                        >
+                            <Globe size={20} />
+                            Live Site
+                        </a>
+
+                    </div>
+
                 </div>
 
             </section>
@@ -927,7 +1043,7 @@ export default function About() {
                     <p>© 2026 Air Quality Prediction System</p>
 
                     <p className="mt-4 md:mt-0">
-                        Developed with ❤️ using React • FastAPI • Machine Learning
+                        Developed with ❤️ using React • FastAPI • PostgreSQL
                     </p>
 
                 </div>
