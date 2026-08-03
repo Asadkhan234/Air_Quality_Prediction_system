@@ -139,22 +139,6 @@ export default function About() {
 
                             </div>
 
-                            {/* Live Deployment Link */}
-
-                            <div className="flex flex-wrap gap-4 mt-6">
-
-                                <a
-                                    href="https://air-quality-prediction-system-mauve.vercel.app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-black/20 backdrop-blur-md border border-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-black/30 transition duration-300"
-                                >
-                                    <Globe size={16} />
-                                    Live Site — Vercel
-                                </a>
-
-                            </div>
-
                         </div>
 
                         {/* Right */}
